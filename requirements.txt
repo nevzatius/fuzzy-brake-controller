@@ -1,3 +1,4 @@
 numpy
 scikit-fuzzy
 scipy
+pyqt5

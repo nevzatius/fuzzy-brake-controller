@@ -63,8 +63,3 @@ python main.py --gui qt    # PyQt5 arayüzü
 ```bash
 python src/membership_plots.py
 ```
-
-## Geliştirme ve Dokümantasyon
-- `docs/report.md` dosyasında üyelik fonksiyonları, kural tabanı ve sistem mimarisi detaylıca anlatılmıştır.
-- `.gitignore` ile gereksiz dosyaları filtreleyebilirsiniz.
-- `LICENSE` ekleyerek açık lisans belirtebilirsiniz.

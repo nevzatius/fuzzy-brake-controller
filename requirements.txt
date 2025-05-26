@@ -2,3 +2,4 @@ numpy
 scikit-fuzzy
 scipy
 pyqt5
+matplotlib

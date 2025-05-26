@@ -8,42 +8,19 @@ Bu proje, fren basıncı dağılımını ön ve arka tekerlekler arasında bulan
 - Bulanık mantık, belirsiz ve sürekli verileri insan benzeri IF–THEN kurallarıyla işleme uygundur.  
 - Otomotivde ABS ve ESP sistemlerinde bulanık kontrolcü uygulamaları yaygındır.
 
-## 3. Üyelik Fonksiyonları
-Her bir girdi değişkeni (speed, brake_pressure, road_grip, slope, tire_temp) için **üçgen (trimf)** üyelik fonksiyonları tanımlandı:
+### 3. Üyelik Fonksiyonları
 
-- **Düşük (Low)**  
-  \[
-    \mu_{low}(x) =
-    \begin{cases}
-      1, & x \le a,\\
-      1 - \frac{x - a}{b - a}, & a < x < b,\\
-      0, & x \ge b
-    \end{cases}
-  \]
-- **Orta (Medium)**  
-  \[
-    \mu_{medium}(x) =
-    \begin{cases}
-      0, & x \le a,\\
-      \frac{x - a}{b - a}, & a < x < b,\\
-      1 - \frac{x - b}{c - b}, & b \le x < c,\\
-      0, & x \ge c
-    \end{cases}
-  \]
-- **Yüksek (High)**  
-  \[
-    \mu_{high}(x) =
-    \begin{cases}
-      0, & x \le a,\\
-      \frac{x - a}{b - a}, & a < x < b,\\
-      1, & x \ge b
-    \end{cases}
-  \]
+Her her girdi değişkeni için üçgen üyelik fonksiyonları:
 
-> **Örnek**: `speed` için  
-> - Düşük:  \(a=0,\;b=0\)  
-> - Orta:   \(a=60,\;b=100,\;c=140\)  
-> - Yüksek: \(a=120,\;b=200\)
+![Low Üyelik Fonksiyonu](figures/mu_low.png)  
+*Düşük (Low)*
+
+![Medium Üyelik Fonksiyonu](figures/mu_medium.png)  
+*Orta (Medium)*
+
+![High Üyelik Fonksiyonu](figures/mu_high.png)  
+*Yüksek (High)*
+
 
 ## 4. Kural Tabanı ve Çıkarım Süreci
 
